@@ -1,0 +1,27 @@
+import random
+
+You = input("Enter your option :\n S:Snake\n W:Water\n G:Gun\nchoose: ")
+Variables = {"S":1, "W" :2, "G":3}
+revVariables = {1:"Snake", 2:"Water", 3:"Gun"}
+CPU = random.choice([1,2,3])
+computer = CPU
+your = Variables[You]
+print(f"You choose:{revVariables[your]}\nComputer choose:{revVariables[CPU]}\n")
+
+if(your == computer):
+    print("Hey You Got Draw")
+else:
+    if(your==1 and computer==2):
+        print("you Win! Yolla")
+    elif(your==1 and computer==3):
+        print("you Lose! Ban Gaya Colla")
+    elif(your==2 and computer==1):
+        print("you Lose! Ban Gaya Colla")
+    elif(your==2 and computer==3):
+        print("you Win! Yolla")
+    elif(your==3 and computer==1):
+        print("you Win! Yolla")
+    elif(your==3 and computer==2):
+        print("you Lose! Ban Gaya Colla")
+    else:
+        print("Something went wrong")
